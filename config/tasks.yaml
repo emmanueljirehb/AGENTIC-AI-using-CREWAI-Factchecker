@@ -1,0 +1,29 @@
+fact_check_task:
+  description: >
+    Use online sources to investigate the following claim.
+    Return one of: True, False, or Misleading.
+    Provide a clear explanation with supporting evidence.
+    If the claim is inaccurate or misleading, rewrite it correctly.
+
+    Claim:
+    {claim}
+  expected_output: >
+    Verdict: [True/False/Misleading]
+    Explanation: [Detailed explanation with at least 2 reliable sources]
+    Correct Claim: [If applicable]
+
+url_summary_task:
+  description: >
+    Analyze the content from the following URL:
+    1. Highlight factual claims
+    2. Flag any false or unverified information (with references)
+    3. Detect misleading or manipulative language
+    4. Summarize the article in 5 concise bullet points
+
+    URL:
+    {url}
+  expected_output: >
+    ✅ Verified factual statements  
+    ❌ False or unverified information (with source links)  
+    ⚠ Detected misleading content  
+    📌 Article Summary (5 bullets)
